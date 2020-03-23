@@ -2,7 +2,6 @@ import discord , asyncio , datetime , sys , os , random
 from parser import *
 client = discord.Client()
 
-    now = datetime.datetime.now()
 @client.event
 async def on_ready():
     print(client.user.id)
