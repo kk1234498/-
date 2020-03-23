@@ -14,7 +14,12 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
-
+async def my_background_task():
+        await client.wait_until_ready()
+        channel = discord.Object(id='685441685844525097')
+        while not client.is_closed:
+            await client.send_message(channel, "hi")
+            await asyncio.sleep(5) 
 
 
 async def on_message(message):
@@ -767,6 +772,6 @@ async def on_message(message):
     elif message.content.startswith('!'):
         await message.channel.send("```명령어가 존재하지않습니다.\n!명령어 <-를 입력하여 명령어를 확인해주세요.```")
 
-
+client.loop.create_task(my_background_task())
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
