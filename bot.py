@@ -708,7 +708,26 @@ async def on_message(message):
     elif message.content == ("!합성창"):
         embed = discord.Embed(title="아이템 정보", description="공 + 58 ~ 40\n민 - 11 ~ 15\n크리티컬 + 5%\n\n"
                                                           "나무9 + 상아9\n\n"
-                             "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비", color=0xAC58FA)
+                             "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비\n\n"
+                                                          "* 합성소재 판매지\n"
+                                                        "- 정령의 마을(동80 남22)에 위치한 편의점\n"
+                                                        "- 석상3 소재는 소재보따리에서 랜덤으로만 획득 가능\n", color=0xAC58FA)
+        await message.channel.send(embed=embed)
+    elif message.content == ("!합성투구"):
+        embed = discord.Embed(title="아이템 정보", description="방 + 25 ~ 17\n민 - 5 ~ 7\n\n"
+                                                          "가죽9 + 뼈9\n\n"
+                                                          "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비"
+                                                          "* 합성소재 판매지\n"
+                                                          "- 정령의 마을(동80 남22)에 위치한 편의점\n"
+                                                          "- 석상3 소재는 소재보따리에서 랜덤으로만 획득 가능\n",color=0xAC58FA)
+        await message.channel.send(embed=embed)
+    elif message.content == ("!합성갑옷"):
+        embed = discord.Embed(title="아이템 정보", description="방 + 46 ~ 32\n민 - 10 ~ 14\n\n"
+                                                          "가죽9 + 돌9\n\n"
+                                                          "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비"
+                                                          "* 합성소재 판매지\n"
+                                                          "- 정령의 마을(동80 남22)에 위치한 편의점\n"
+                                                          "- 석상3 소재는 소재보따리에서 랜덤으로만 획득 가능\n", color=0xAC58FA)
         await message.channel.send(embed=embed)
         
         #레이드소모템
