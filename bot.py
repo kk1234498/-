@@ -14,12 +14,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
-async def my_background_task():
-        await client.wait_until_ready()
-        channel = discord.Object(id='685441685844525097')
-        while not client.is_closed:
-            await client.send_message(channel, "hi")
-            await asyncio.sleep(5) 
+
 
 
 async def on_message(message):
@@ -30,7 +25,13 @@ async def on_message(message):
                                                           "!환포계산기 / !압물",
                               color=0xFF0000)
         await message.channel.send(embed=embed)
-
+        
+async def my_background_task():
+        await client.wait_until_ready()
+        channel = discord.Object(id='685441685844525097')
+        while not client.is_closed:
+            await client.send_message(channel, "hi")
+            await asyncio.sleep(5) 
 
 
 
