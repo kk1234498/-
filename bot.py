@@ -371,8 +371,8 @@ async def on_message(message):
 
     elif message.content == ("!페트푸드"):
 
-        await message.channel.send("```러시안 페트푸드1 [충성2전후 ] : 육포 + 물고기1\n
-                                    러시안 페트푸드2 [충성5전후 상승] : 큰고기(고기3) + 물고기2 + 도토리3 + 해초4```")
+        await message.channel.send("```러시안 페트푸드1 [충성2전후 ] : 육포 + 물고기1\n"
+                                   " 러시안 페트푸드2 [충성5전후 상승] : 큰고기(고기3) + 물고기2 + 도토리3 + 해초4```")
 
     elif message.content == ("!압물"):
         await message.channel.send("```아부의 성스러운 물이여 나에게 광채나는 힘을\n\n"
