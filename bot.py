@@ -681,31 +681,31 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
         
-            elif message.content == ("!이라의불꽃"):
+    elif message.content == ("!이라의불꽃"):
         embed = discord.Embed(title="아이템 정보", description="공 + 3 ~ 7 [랜덤]\n"
                                                           "내 + 5 ~ 20 [랜덤]\n\n"
                                                           "얼음성 레이드 - 헤티아 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-            elif message.content == ("!영웅의신물"):
+    elif message.content == ("!영웅의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 5 포인트 랜덤 능력치 부여\n\n"
                                                           "하이하모 (동106, 남574) 상인 리버에게 30RP로 구매\n\n"
                                                           "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                                                          "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
-            elif message.content == ("!영광의신물"):
+    elif message.content == ("!영광의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 10 포인트 랜덤 능력치 부여\n\n"
                                                           "얼음성 레이드 - 암흑 헤티아의 전리품\n\n"
                               "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                               "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
         
-            elif message.content == ("!지옥의신물"):
+    elif message.content == ("!지옥의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 15 포인트 랜덤 능력치 부여\n\n"
                                                           "얼음성 레이드 - 암흑 헤티아의 전리품\n\n"
                              "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                               "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
-             elif message.content == ("!합성창"):
+    elif message.content == ("!합성창"):
         embed = discord.Embed(title="아이템 정보", description="공 + 58 ~ 40\n민 - 11 ~ 15\n크리티컬 + 5%\n\n"
                                                           "나무9 + 상아9\n\n"
                              "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비", color=0xAC58FA)
