@@ -14,6 +14,7 @@ async def on_ready():
 
 
 async def on_message(message):
+        now = datetime.datetime.now()
     if  message.content == ("!명령어"):
         embed = discord.Embed(title="명령어모음집", description="!아이템이름 (레이드템만가능 아이템풀네임입력)\n!듀얼신청\n\n!주사위\n!가위바위보\n\n!홈피 / !돈페트 / !레이드 / "
                                                           "!마을레이드\n!흑룡 / !헤티아 / !창티아 / !활티아 / !보물방활 / !보물방창\n! / !기무2 / !기무3 / !수룡 / "
@@ -22,6 +23,8 @@ async def on_message(message):
                               color=0xFF0000)
         await message.channel.send(embed=embed)
 
+    elif message.content ==("!시간"):
+        await message.channel.send(str(now.year) + "년 " + str(now.month) + "월 " + str(now.day) + "일 | " + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second))
 
 
 
