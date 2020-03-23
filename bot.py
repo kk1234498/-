@@ -4,7 +4,10 @@ import os
 client = discord.Client()
 
 @client.event
-
+async def on_member_join(member):
+    fmt = '{1.name} 에 오신것을 환영합니다., {0.mention} 님'
+    channel = member.server.get_channel("685441685844525097")
+    await client.send_message(channel, fmt.format(member, member.server))
 
 async def on_ready():
     print(client.user.id)
@@ -14,10 +17,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
-async def on_member_join(member):
-    fmt = '{1.name} 에 오신것을 환영합니다., {0.mention} 님'
-    channel = member.server.get_channel("685441685844525097")
-    await client.send_message(channel, fmt.format(member, member.server))
+
 
 
 async def on_message(message):
