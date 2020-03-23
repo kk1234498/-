@@ -1,13 +1,6 @@
-import discord
-import random
-import os
+import discord , asyncio , datetime , sys , os , random
 client = discord.Client()
 
-@client.event
-async def on_member_join(member):
-    fmt = '{1.name} 에 오신것을 환영합니다., {0.mention} 님'
-    channel = member.server.get_channel("685441685844525097")
-    await client.send_message(channel, fmt.format(member, member.server))
 
 async def on_ready():
     print(client.user.id)
@@ -769,6 +762,5 @@ async def on_message(message):
     elif message.content.startswith('!'):
         await message.channel.send("```명령어가 존재하지않습니다.\n!명령어 <-를 입력하여 명령어를 확인해주세요.```")
 
-client.loop.create_task(my_background_task())
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
