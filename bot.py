@@ -705,7 +705,11 @@ async def on_message(message):
                              "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                               "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
-        
+   elif message.content == ("!합성창"):
+        embed = discord.Embed(title="아이템 정보", description="공 + 58 ~ 40\n민 - 11 ~ 15\n크리티컬 + 5%\n\n"
+                                                          "나무9 + 상아9\n\n"
+                             "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비", color=0xAC58FA)
+        await message.channel.send(embed=embed)
         
         #레이드소모템
     elif message.content == ("!영혼의서약"):
