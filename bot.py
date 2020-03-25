@@ -491,7 +491,7 @@ async def on_message(message):
 
 
     elif message.content == ("!듀얼신청"):
-        channel = 683681607214825512
+        channel = 692324317953785867
         await client.get_channel(int(channel)).send("듀얼신청합니다.\n" + message.author.nick)
         await message.channel.send("```신청이 완료되었습니다.\n\n"
                                    "듀얼날짜 : 매주일요일\n"
