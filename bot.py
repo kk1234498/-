@@ -381,7 +381,7 @@ async def on_message(message):
         #완료
 
     elif message.content == ("!공식듀얼"):
-        await message.channel.send("```매주 일요일 7시30분 2채 투기장에서 진행\n\n부족내 듀얼신청은 #듀얼게시판에서 가능\n\n참여 기본보상 : 경험치 구슬 5시간 & "
+        await message.channel.send("```매주 일요일 7시30분 2채 투기장에서 진행\n\n부족내 듀얼신청은 !듀얼신청명령어로 신청 가능\n\n참여 기본보상 : 경험치 구슬 5시간 & "
                                    "전쟁포인트 3```")
     elif message.content == ("!개인듀얼"):
         await message.channel.send("```매일 10시00분 듀얼채널에서 진행\n\n참여 기본보상 : 개인듀얼 포인트 3```")
