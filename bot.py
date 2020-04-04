@@ -19,13 +19,9 @@ async def on_message(message):
         embed = discord.Embed(title="명령어모음집", description="!아이템이름 (레이드템만가능 아이템풀네임입력)\n!듀얼신청\n\n!주사위\n!가위바위보\n\n!홈피 / !돈페트 / !레이드 / "
                                                           "!마을레이드\n!흑룡 / !헤티아 / !창티아 / !활티아 / !보물방활 / !보물방창\n! / !기무2 / !기무3 / !수룡 / "
                                                           "!칠흑 / !지옥문\n!공식듀얼 / !개인듀얼 / !허환작 / !독뎀\n!환포퀘 / !강화 / !경험치테이블 / !합성재료 / !합성토템 / !페트푸드\n"
-                                                          "!환포계산기 / !압물",
+                                                          "!환포계산기 / !압물 / !",
                               color=0xFF0000)
         await message.channel.send(embed=embed)
-
-
-    elif message.content ==("!시간"):
-        await message.channel.send(str(now.year) + "년 " + str(now.month) + "월 " + str(now.day) + "일 | " + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second))
 
 
 
@@ -69,6 +65,14 @@ async def on_message(message):
         await message.channel.send("나의 세상 나의 빛 아이즈원")
     elif message.content == ("!골드볼라"):
         await message.channel.send("```회긔펫을 잡기위해 필요하다\n추가정보 작성중```")
+        
+    elif message.content == ("!복권"):
+        await message.channel.send("```1등복권 - 상급돈펫\n샴기르 - 실버우리 / 마리너스 - 노르노르 \n쟈쟈 - 크루거\n카루타나 - 프리토스\n파론 - 헤르마루\n후르도 - 베르마루\n호미곳 - 베라라\n\n"
+                                   "2등복권 - 장인의 큐브\n"
+                                   "3등복권 - 3만스톤\n"
+                                   "4등복권 - 5천스톤\n"
+                                   "5등복권 - 천스톤\n"
+                                   "6등복권 - 500스톤```")
 
 
     elif message.content == ("!합성토템"):
