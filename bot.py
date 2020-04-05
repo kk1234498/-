@@ -16,7 +16,7 @@ async def on_ready():
 async def on_message(message):
     now = datetime.datetime.now()
     if  message.content == ("!명령어"):
-        embed = discord.Embed(title="명령어모음집", description="!아이템이름 (레이드템만가능 아이템풀네임입력)\n!듀얼신청\n\n!주사위\n!가위바위보\n\n!홈피 / !돈페트 / !레이드 / "
+        embed = discord.Embed(title="명령어모음집", description="!아이템이름 (레이드템만가능 아이템풀네임입력)\n!듀얼신청 \n !\n\n!주사위\n!가위바위보\n\n!홈피 / !돈페트 / !레이드 / "
                                                           "!마을레이드\n!흑룡 / !헤티아 / !창티아 / !활티아 / !보물방활 / !보물방창\n! / !기무2 / !기무3 / !수룡 / "
                                                           "!칠흑 / !지옥문\n!공식듀얼 / !개인듀얼 / !허환작 / !독뎀\n!환포퀘 / !강화 / !경험치테이블 / !합성재료 / !합성토템 / !페트푸드\n"
                                                           "!환포계산기 / !압물 / !복권",
@@ -56,7 +56,16 @@ async def on_message(message):
             await message.channel.send(message.channel, embed=discord.Embed(description=':v:'))
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
-
+    elif message.content == ("!노래봇명령어"):
+        await message.channel.send("```=m j - [해당음성채널로 봇을 부릅니다]\n
+                                   "=m q 노래제목 - [해당 노래제목을 검색합니다.]\n
+                                   "대기열추가 - [이후 원하는숫자입력 1~9 & C]\n\n
+                                   "=m p 노래제목 - [해당 노래를 즉시재생합니다.]\n
+                                   "=m s - [노래스킵]\n
+                                   "=m sq - [대기열확인]\n
+                                   "=m l - [노래봇 내보내기]```")
+        
+        
 
     elif message.content == ("!홈피"):
         await message.channel.send("https://fresh01.net/main")
@@ -64,7 +73,7 @@ async def on_message(message):
     elif message.content.startswith("물이슬"):
         await message.channel.send("나의 세상 나의 빛 아이즈원")
     elif message.content == ("!골드볼라"):
-        await message.channel.send("```회긔펫을 잡기위해 필요하다\n추가정보 작성중```")
+        await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```")
         
     elif message.content == ("!복권"):
         await message.channel.send("```1등복권 - 상급돈펫\n[샴기르 - 실버우리]\n[마리너스 - 노르노르] \n[쟈쟈 - 크루거]\n[카루타나 - 프리토스]\n[파론 - 헤르마루]\n[후르도 - 베르마루]\n[호미곳 - 베라라]\n\n"
