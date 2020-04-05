@@ -57,10 +57,12 @@ async def on_message(message):
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
     elif message.content == ("=노래봇명령어"):
-        await message.channel.send("```!!help를 입력하여 수많은 명령어에 대한 도움말을 얻을 수 있습니다.\n"
-                                    "핵심 명령어\n"
-                                      "!!s <검색할 단어> 유튜브에서 ‘검색할 단어’를 검색합니다. (1분 안에 번호가 표시된 스티커를 누르면 재생됩니다)\n"
-                                       "!!p <링크 혹은 유튜브에서 검색할 단어> 링크의 음원을 재생하거나, 유튜브에서 나오는 첫번째 검색 결과를 재생합니다.```")
+        await message.channel.send("```"!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
+                                        "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n
+                                        "!!대기열 - [노래 대기열을 확인합니다.]\n"
+                                        "!!삭제 숫자 - [해당대기열의 노래를삭제합니다.\n"
+                                   
+                                   "[추천명령어 : !!재생 멜론 - [멜론노래가 똭!]```")
         
         
 
