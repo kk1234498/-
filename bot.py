@@ -17,14 +17,14 @@ async def on_message(message):
     now = datetime.datetime.now()
     if  message.content == ("~명령어"):
         embed = discord.Embed(title="명령어모음집", description="~아이템이름\n~주사위\n~가위바위보\n"
-                              "[레이드관련]\n"
-                              "~마을레이드\n"
-                              "~수룡\n"
-                              "~흑룡\n"
-        "~듀얼신청 \n ~노래봇명령어\n\n\n\n~홈피 / ~돈페트 / ~레이드 / "
+                                                                "[레이드관련]\n"
+                                                                "~마을레이드\n"
+                                                                "~수룡\n"
+                                                                 "~흑룡\n"
+        "~듀얼신청 \n ~노래봇명령어\n\n\n\n~홈피 / ~돈페트 / ~레이드 /"
                                                           " / ~헤티아 / ~창티아 / ~활티아 / ~보물방활 / ~보물방창\n~ / ~기무2 / ~기무3  / "
                                                           "~칠흑 / ~지옥문\n~공식듀얼 / ~개인듀얼 / ~허환작 / ~독뎀\n~환포퀘 / ~강화 / ~경험치테이블 / ~합성재료 / ~합성토템 / ~페트푸드\n"
-                                                          "~환포계산기 / ~압물 / ~복권",
+                                                          "~환포계산기 / ~압물 / ~복권"
                               color=0xFF0000)
         await message.channel.send(embed=embed)
 
@@ -62,8 +62,8 @@ async def on_message(message):
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
     elif message.content == ("=노래봇명령어"):
-        await message.channel.send("```"!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
-                                        "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n
+        await message.channel.send("```!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
+                                        "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n"
                                         "!!대기열 - [노래 대기열을 확인합니다.]\n"
                                         "!!삭제 숫자 - [해당대기열의 노래를삭제합니다.\n"
                                    
