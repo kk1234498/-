@@ -7,7 +7,7 @@ async def on_ready():
     print(client.user.id)
     print("봇가동이 완료되었습니다.")
 
-    game = discord.Game("!명령어 로 명령어확인가능")
+    game = discord.Game("~명령어 로 명령어확인가능")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 @client.event
@@ -15,18 +15,18 @@ async def on_ready():
 
 async def on_message(message):
     now = datetime.datetime.now()
-    if  message.content == ("!명령어"):
-        embed = discord.Embed(title="명령어모음집", description="!아이템이름 (레이드템만가능 아이템풀네임입력)\n!듀얼신청 \n !\n\n!주사위\n!가위바위보\n\n!홈피 / !돈페트 / !레이드 / "
-                                                          "!마을레이드\n!흑룡 / !헤티아 / !창티아 / !활티아 / !보물방활 / !보물방창\n! / !기무2 / !기무3 / !수룡 / "
-                                                          "!칠흑 / !지옥문\n!공식듀얼 / !개인듀얼 / !허환작 / !독뎀\n!환포퀘 / !강화 / !경험치테이블 / !합성재료 / !합성토템 / !페트푸드\n"
-                                                          "!환포계산기 / !압물 / !복권",
+    if  message.content == ("~명령어"):
+        embed = discord.Embed(title="명령어모음집", description="~아이템이름 (레이드템만가능 아이템풀네임입력)\n~듀얼신청 \n ~노래봇명령어\n\n~주사위\n~가위바위보\n\n~홈피 / ~돈페트 / ~레이드 / "
+                                                          "~마을레이드\n~흑룡 / ~헤티아 / ~창티아 / ~활티아 / ~보물방활 / ~보물방창\n~ / ~기무2 / ~기무3 / ~수룡 / "
+                                                          "~칠흑 / ~지옥문\n~공식듀얼 / ~개인듀얼 / ~허환작 / ~독뎀\n~환포퀘 / ~강화 / ~경험치테이블 / ~합성재료 / ~합성토템 / ~페트푸드\n"
+                                                          "~환포계산기 / ~압물 / ~복권",
                               color=0xFF0000)
         await message.channel.send(embed=embed)
 
 
 
 
-    elif message.content == ("!주사위"):
+    elif message.content == ("~주사위"):
         randomNum = random.randrange(1, 7)  # 1~6까지 랜덤수
         print(randomNum)
         if randomNum == 1:
@@ -41,7 +41,7 @@ async def on_message(message):
             await message.channel.send(message.channel, embed=discord.Embed(description=':five:'))
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description= ':six: '))
-    elif message.content == ("!가위바위보"):
+    elif message.content == ("~가위바위보"):
         randomNum = random.randrange(1, 7)  # 1~6까지 랜덤수
         print(randomNum)
         if randomNum == 1:
@@ -56,26 +56,26 @@ async def on_message(message):
             await message.channel.send(message.channel, embed=discord.Embed(description=':v:'))
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
-    elif message.content == ("!노래봇명령어"):
-        await message.channel.send("```=m j - [해당음성채널로 봇을 부릅니다]\n
-                                   "=m q 노래제목 - [해당 노래제목을 검색합니다.]\n
-                                   "대기열추가 - [이후 원하는숫자입력 1~9 & C]\n\n
-                                   "=m p 노래제목 - [해당 노래를 즉시재생합니다.]\n
-                                   "=m s - [노래스킵]\n
-                                   "=m sq - [대기열확인]\n
+    elif message.content == ("=노래봇명령어"):
+        await message.channel.send("```=m j - [해당음성채널로 봇을 부릅니다]\n"
+                                   "=m q 노래제목 - [해당 노래제목을 검색합니다.]\n"
+                                   "대기열추가 - [이후 원하는숫자입력 1~9 & C]\n\n"
+                                   "=m p 노래제목 - [해당 노래를 즉시재생합니다.]\n"
+                                   "=m s - [노래스킵]\n"
+                                   "=m sq - [대기열확인]\n"
                                    "=m l - [노래봇 내보내기]```")
         
         
 
-    elif message.content == ("!홈피"):
+    elif message.content == ("~홈피"):
         await message.channel.send("https://fresh01.net/main")
 
     elif message.content.startswith("물이슬"):
         await message.channel.send("나의 세상 나의 빛 아이즈원")
-    elif message.content == ("!골드볼라"):
+    elif message.content == ("~골드볼라"):
         await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```")
         
-    elif message.content == ("!복권"):
+    elif message.content == ("~복권"):
         await message.channel.send("```1등복권 - 상급돈펫\n[샴기르 - 실버우리]\n[마리너스 - 노르노르] \n[쟈쟈 - 크루거]\n[카루타나 - 프리토스]\n[파론 - 헤르마루]\n[후르도 - 베르마루]\n[호미곳 - 베라라]\n\n"
                                    "2등복권 - [장인의 큐브]\n"
                                    "3등복권 - [3만스톤]\n"
@@ -84,7 +84,7 @@ async def on_message(message):
                                    "6등복권 - [500스톤]```")
 
 
-    elif message.content == ("!합성토템"):
+    elif message.content == ("~합성토템"):
         await message.channel.send("```합성 토템 정보\n\n"
                                    "합성 토템 1 : 전투 종료 HP 30 회복\n"
                                    "합성 토템 2 : 전투 종료 HP 40 회복\n"
@@ -101,7 +101,7 @@ async def on_message(message):
                                    "방어구 - 북이 / 돌북이\n"
                                    "악세사리 - 골드부비```")
 
-    elif message.content == ("!돈페트"):
+    elif message.content == ("~돈페트"):
             await message.channel.send("```돈페트 정보 \n최상급 페트 - 1등급\n상급페트 - 2등급\n초보자 두리 육성 퀘스트 - 우리스타(상급)\n루니/베르가 포획 퀘스트 "
                                        "- 쿠보(상급), 노보(상급)\n채석장의 비밀 - 모나시프(상급), 라나프(상급), 프이토(상급)\n카난 이벤트 - 휴보(상급)\n퀴즈 "
                                        "마스터 - 골드부비(상급), 얼룩부이비(상급)\n마쥬의 우편배달 - 차이혼(상급), 파라프(상급)\n밤미를 갖고싶어 - 알테로스("
@@ -111,19 +111,19 @@ async def on_message(message):
                                        "로라미우스(상급), 고로(상급)\n페트 자판기(아이템 자판기) - 라이혼(최상급), 타이혼(최상급)\n140보상페트 - 다크울프 (상급), "
                                        "막쿠마(상급), 디사크(상급), 문울프(상급)```")
 
-    elif message.content == ("!레이드"):
+    elif message.content == ("~레이드"):
         await message.channel.send("```레이드는 일주일에 계정마다 20(15회기본 5회 구입)회 진행 가능하며, 매주 일요일 0시에 초기화됩니다.\n"
                                    "레이드 클리어시에 보스마다 전리품을 각 플레이어에게 지급해줍니다. 여기서 기본으로 1 레이드포인트가 뜨고, 레어템은 각 전리품마다 낮은 확률로 뜰수가 "
                                    "있습니다.\n\n레이드의 종류\n[마을 레이드]\n[얼음성 레이드]\n[기계무덤 레이드]\n[용 소탕 레이드]\n[칠흑의 정령 레이드]\n[지옥문 레이드] ```")
         #완료
-    elif message.content == ("!마을레이드"):
+    elif message.content == ("~마을레이드"):
         await message.channel.send("```각 마을별로 존재하는 레이드 하루1회가능 00시 초기화\n\n"
                                    "샴기르마을 : 동76,남77 NPC동상지킴이에서 입장\n"
                                    "마리너스 마을 : 동62,남120 NPC감염된 액체에서 입장\n"
                                    "쟈쟈 마을 : 동99,남63 우물안 동6,남10 NPC도적기리에서 입장\n"
                                    "카루타나 마을 : 카루타나 목장 앞 쟈루(동328, 남650) 부근에서 전투시 일정 확률로 문울프가 등장합니다. 문울프를 처치시완료\n\n레이드중 가장쉽다.```")
         #완료
-    elif message.content == ("!수룡"):
+    elif message.content == ("~수룡"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.\n\n"
                                    "보상 : [수룡의 비늘] [수룡의 발톱] [수룡의 가죽]\n\n"
                                    "수룡 준비물 - 쟈쟈 촌장댁에서 피리(물)구매 ["
@@ -135,7 +135,7 @@ async def on_message(message):
                                    "공략방법\n[리더] 스펙에따라 2~4마리 죽을때까지 가드\n[활캐] 메갈로돈 AI순서대로 공격\n[순캐] 첫턴 상대몹에 오로라 /  두번째턴 수우대\n[페트] 수우대걸릴때까지 충견 이후 배진\n\n"
                                    "플레이중 혼란에걸리면 반드시 로그아웃후 재입장하셔야합니다.```")
         #완료
-    elif message.content == ("!흑룡"):
+    elif message.content == ("~흑룡"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.\n\n"
                                    "사전 필수 퀘스트 : 얼음의 균열 퀘스트\n\n"
                                    "보상 : [바르의 바람] [흑룡의 발톱] [어린흑룡 펫병] [흑기린 펫병]\n\n"
@@ -154,10 +154,10 @@ async def on_message(message):
                                    "[페트] - 배수의 진 1번흑기린부터\n\n"
                                    "흑룡은 가장나중에 공격합니다.```")
         #완료
-    elif message.content == ("!헤티아"):
-        await message.channel.send("```!창티아 & !활티아를 이용해주세요.```")
+    elif message.content == ("~헤티아"):
+        await message.channel.send("```~창티아 & ~활티아를 이용해주세요.```")
 
-    elif message.content == ("!창티아"):
+    elif message.content == ("~창티아"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.\n\n"
                                    "사전 필수 퀘스트 : 얼음의 균열 퀘스트\n\n"
                                    "보상 : [이라의 불꽃] [적색 큐브] [삼위일체의 구슬] [어린백룡 펫병]\n\n"
@@ -179,7 +179,7 @@ async def on_message(message):
                                    "잡는순서\n"
                                    "앞줄 AI순서 흑룡부터 순서대로 처치후 언딘 -> 헤티아 / 페트 일공```")
         #완료
-    elif message.content == ("!활티아"): #완료
+    elif message.content == ("~활티아"): #완료
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있으니 출발전 확인하시기 바랍니다.\n\n"
                                    "사전 필수 퀘스트 : 얼음의 균열 퀘스트\n\n"
                                    "보상 : [이라의 불꽃] [적색 큐브] [삼위일체의 구슬] [어린백룡 펫병]\n\n"
@@ -200,7 +200,7 @@ async def on_message(message):
                                    "순캐 : 화우대 / 힐 반복 / 페트 배진2\n\n"
                                    "잡는순서\n"
                                    "활은 AI순서대로 공격 / 페트 배진2 윗언딘먼저 그다음 아랫언딘```")
-    elif message.content == ("!보물방활"):
+    elif message.content == ("~보물방활"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있으니 출발전 확인하시기 바랍니다.\n\n"
                                    "*보물방[활팟] - 화속성\n"
 "완캐 4명, 순캐 1명\n"
@@ -232,9 +232,9 @@ async def on_message(message):
 "첫턴 이후\n"
 "[완캐] - 백룡-청룡-주작-헤티아-풍백-현무 순서 / 페트 배진\n"
 "[순캐] - 우대, 힐반복 / 페트 배진 @우대안끊어지도록 주의```")
-    elif message.content == ("!보물방창"):
+    elif message.content == ("~보물방창"):
         await message.channel.send("```솔직히 활팟이 더좋은거같음 굳이 적어야해요?```")
-    elif message.content == ("!기무1"):
+    elif message.content == ("~기무1"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.(활팟기준)\n\n"
                                    "사전 필수 퀘스트 : 기계 무덤 탐색\n\n"
                                    "보상 : [골로스의 심장] [영혼의 서약] [어린 레드드래곤의 영혼]\n\n"
@@ -253,7 +253,7 @@ async def on_message(message):
                                    "고순 : 첫턴 수우대 이후 힐 반복\n"
                                    "페트 : 원숭이(드리오쿠스) 뒷줄 역AI순으로 배수의진2 \n"
                                    "이후 흑귀 -> 골로스순 처치```")
-    elif message.content == ("!기무2"):
+    elif message.content == ("~기무2"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있으니 출발전 확인하시기 바랍니다.\n\n"
                                    "사전 필수 퀘스트 : 기계 무덤 탐색\n"
                                    "보상 : [기계 파편] [적색 큐브] [어린 주작의 영혼]\n"
@@ -281,7 +281,7 @@ async def on_message(message):
                                    "공략방법 [닉스가 모두 죽은후]\n"
                                    "완캐들 : [로그아웃 이후 노탑활로 바꿔서 빠르게 들어옵니다.]\n"
                                    "그후 뒷줄 원숭이부터 공격```")
-    elif message.content == ("!기무3"):
+    elif message.content == ("~기무3"):
         await message.channel.send("```※ 파티마다 잡는 방법이 다른 경우가 많으니 레이드 시작 전에 어떻게 잡을지 물어보세요.\n\n"
             "사전 필수 퀘스트 : 기계 무덤 탐색\n\n"
             "보상 : [기계파편(暗]] [불꽃장궁] [적색큐브] [암흑골로스의영혼]\n\n"
@@ -308,7 +308,7 @@ async def on_message(message):
 
         #완료
 
-    elif message.content == ("!지옥문"):
+    elif message.content == ("~지옥문"):
         await message.channel.send("```사전 필수 퀘스트 : 에레보스 진입 퀘스트\n\n"
                                     "※ 입장에 입장 문서(3만 스톤)가 소모되며, 보상으로 레이드포인트를 지급하지 않습니다.\n\n"
                                     "※ 지옥문1은 진행하지 않으며 지옥문2와 지옥문3만 진행합니다.\n\n"
@@ -367,7 +367,7 @@ async def on_message(message):
                                    "순캐가 은혜의정령 대신 고급 호화 생선회를 경우가 존재합니다.\n\n"
                                    "정보제공자 - 참이슬```")
 
-    elif message.content == ("!칠흑"):
+    elif message.content == ("~칠흑"):
        await message.channel.send("```보상 : [정령의 상자 (속성반지 4가지중 하나)] [보석 상자 (중급 스텟초기화 보석)] [경험치 티켓 (80만 경험치)] [흑귀 페트병] "
                                   "[다크야무 페트병] [가론고르 페트병]\n\n"
                                   "사전 퀘스트 : 기계무덤 탐색 퀘스트, 사대 퀘스트, 조력자의 단서를 찾아서\n\n하루최대 4회가능 00시초기화 클리어기준 1채 2채 한번씩클리어 "
@@ -381,24 +381,24 @@ async def on_message(message):
                                   "빠르게 채널변경```")
 
 
-    elif message.content == ("!페트푸드"):
+    elif message.content == ("~페트푸드"):
 
         await message.channel.send("```러시안 페트푸드1 [충성2전후 ] : 육포 + 물고기1\n"
                                    " 러시안 페트푸드2 [충성5전후 상승] : 큰고기(고기3) + 물고기2 + 도토리3 + 해초4```")
 
-    elif message.content == ("!압물"):
+    elif message.content == ("~압물"):
         await message.channel.send("```아부의 성스러운 물이여 나에게 광채나는 힘을\n\n"
                                    "압물은 아부의동굴 6층에서 얻을수있습니다.\n\n"
                                    "가격 : 100스톤```")
 
         #완료
 
-    elif message.content == ("!공식듀얼"):
-        await message.channel.send("```매주 일요일 7시30분 2채 투기장에서 진행\n\n부족내 듀얼신청은 !듀얼신청명령어로 신청 가능\n\n참여 기본보상 : 경험치 구슬 5시간 & "
+    elif message.content == ("~공식듀얼"):
+        await message.channel.send("```매주 일요일 7시30분 2채 투기장에서 진행\n\n부족내 듀얼신청은 ~듀얼신청명령어로 신청 가능\n\n참여 기본보상 : 경험치 구슬 5시간 & "
                                    "전쟁포인트 3```")
-    elif message.content == ("!개인듀얼"):
+    elif message.content == ("~개인듀얼"):
         await message.channel.send("```매일 10시00분 듀얼채널에서 진행\n\n참여 기본보상 : 개인듀얼 포인트 3```")
-    elif  message.content == ("!허환작"):
+    elif  message.content == ("~허환작"):
         await message.channel.send("```* 돈을 가장빨리 벌수있는 방법중 하나\n\n노환에서 1환을 반복하는 작업이다.\n\n\n"
                                    "아래 목록은 클리어하면 좋은 퀘스트목록입니다.\n\n"
                                    "성인식 3EP\n"
@@ -416,9 +416,9 @@ async def on_message(message):
                                    "조력자의 단서를 찾아서 20EP(4대깨면 워프로 한번에 이동가능)```")
         #완료
 
-    elif message.content == ("!환포계산기"):
+    elif message.content == ("~환포계산기"):
         await message.channel.send("https://fresh01.net/tip/23672\n" + "```공식홈페이지 주소입니다.```")
-    elif message.content == ("!독뎀"):
+    elif message.content == ("~독뎀"):
         await message.channel.send("```골드볼라펫 포획시 독뎀확인방법(독정령Lv.4기준)\n\n"
                                    "독정령 구입은 후르도마을이나 투기장에서 가능\n\n"
                                    "독능력치 확인방법\n"
@@ -429,7 +429,7 @@ async def on_message(message):
                                    "능력치 45.5이상부터 독데미지 4\n\n"
                                    "출처 : 프레쉬헌터채널```")
         #완료
-    elif message.content == ("!환포퀘"):
+    elif message.content == ("~환포퀘"):
         await message.channel.send("히로산의 약초 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=450\n"
                                    "친구의 우정 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=480\n"
                                    "야무야무 도끼 전달 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=499\n"
@@ -451,21 +451,21 @@ async def on_message(message):
                                    "마쥬의 우편배달 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=25030\n"
                                    "4개의 보물 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=25033")
         #완료
-    elif message.content == ("!강화"):
+    elif message.content == ("~강화"):
         embed = discord.Embed(title="강화정보", description="강화 능력치", color=0xAC58FA)
         embed.set_footer(
             text="+4강 이상의 장비는 강화 실패시 파괴됩니다.\n강화에 필요한 큐브는 이벤트포인트 & 레이드에서 획득이 가능하다.")
         embed.set_image(url="http://121.149.113.201/File/" + message.content + ".PNG")
         await message.channel.send(embed=embed)
         #완료
-    elif message.content == ("!경험치테이블"):
+    elif message.content == ("~경험치테이블"):
         embed = discord.Embed(title="경험치 테이블 정보", description="경험치 테이블", color=0xAC58FA)
         embed.set_footer(
             text="노환 : 경험치 100퍼 추가경험치\n1환 : 경험치 80퍼 추가경험치\n2환 : 60퍼 추가경험치")
         embed.set_image(url="https://fresh01.net/files/attach/images/11875/483/030/57dfdbecdcb20bcfdb6fae622339b5d9.jpg")
         await message.channel.send(embed=embed)
 
-    elif message.content == ("!합성재료"):
+    elif message.content == ("~합성재료"):
         embed = discord.Embed(title="합성 재료 정보", description="합성 재료 정보", color=0xAC58FA)
         embed.set_footer(
             text="* 합성 귀걸이4 의 경우 속성 부여시 해당 속성 소재6 으로 하시는 게 가장 가공 점수와 일치하여 성공률이 높습니다.\n\n"
@@ -474,7 +474,7 @@ async def on_message(message):
                  "* 가공 추천 페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비")
         embed.set_image(url="https://fresh01.net/files/attach/images/11875/969/034/da68a94bcee8af5b18d40a994aba7e02.jpg")
         await message.channel.send(embed=embed)
-    elif message.content == ("!만포"):
+    elif message.content == ("~만포"):
         await message.channel.send("```#만포루트는 추천사항이며 꼭따라하지 않으셔도 됩니다.\n\n"
                                    "완캐\n\n"
         "0환 > 1환 - [레벨 : 140 / 체력 : 52 / 완력 : 380 / 순발력 : 5]\n"
@@ -498,12 +498,12 @@ async def on_message(message):
                                    "5환 : 192포\n"
                                    "6환 : 5환포인트 + 체력10포\n\n"
         "어디까지나 참고용이고 상세스텟은 환포계산기를 이용해주세요\n\n"
-        "!환포계산기 명령어로 다운가능```")
+        "~환포계산기 명령어로 다운가능```")
 
 
 
 
-    elif message.content == ("!듀얼신청"):
+    elif message.content == ("~듀얼신청"):
         channel = 692324317953785867
         await client.get_channel(int(channel)).send("듀얼신청합니다.\n" + message.author.display_name)
         await message.channel.send("```신청이 완료되었습니다.\n\n"
@@ -512,7 +512,7 @@ async def on_message(message):
                                    "듀얼시간 : 7시30분부터\n\n"
                                    "듀얼당일 7시20분까지 미리 모여주셔야합니다.\n\n```")
 
-    elif message.content == ("!천상의팔찌"):
+    elif message.content == ("~천상의팔찌"):
         embed = discord.Embed(title="아이템 정보", description="#천상의 팔찌는 3가지의 종류가있다.\n\n"
                               "천상공팔 / 천상민팔 / 천상방팔 [가격순기제]\n"
                               "천상공팔 : 공 + 15\n"
@@ -520,109 +520,109 @@ async def on_message(message):
                               "천상방팔 : 방 + 15",color = 0xAC58FA)
         await message.channel.send(embed=embed)
 #레이드아이템
-    elif message.content == ("!흑룡의발톱"):
+    elif message.content == ("~흑룡의발톱"):
         embed = discord.Embed(title="아이템 정보", description="공 + 46\n내구력 + 10\n 크리티컬 확률 + 3%\n은혜의 정령Lv.6\n\n"
                                                           "얼음성레이드 : 흑룡의 전리품 레어 보상\n\n", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!삼수정곤봉"):
+    elif message.content == ("~삼수정곤봉"):
         embed = discord.Embed(title="아이템 정보", description="공 + 23 ~ 26 [랜덤]\n"
                                                           "순 + 18 ~ 20 [랜덤]\n"
                                                           "크리티컬 + 5% ~ 7% [랜덤]\n"
                                                           "은혜의정령Lv.5\n\n"
                                                           "지옥문 레이드 - 헬바이론의 방 또는 지옥의암석(80개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!지옥의창"):
+    elif message.content == ("~지옥의창"):
         embed = discord.Embed(title="아이템 정보", description="공 + 58 ~ 60 [랜덤]\n"
                                                           "순 - 13 ~ 15 [랜덤]\n"
                                                           "내구력 + 5 ~ 10 [랜덤]\n"
                                                           "크리티컬 + 5%\n\n"
                                                           "지옥문 레이드 - 헬베로스의 방 또는 지옥의 암석(100개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!헤티아의빛나는창"):
+    elif message.content == ("~헤티아의빛나는창"):
         embed = discord.Embed(title="아이템 정보", description="공 + 60\n"
                                                           "순 - 12\n"
                                                           "크리티컬 + 7%\n"
                                                           "은혜의정령 Lv.6\n\n"
                                                           "헤티아의 보물의 방에서 5%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!불꽃장궁"):
+    elif message.content == ("~불꽃장궁"):
         embed = discord.Embed(title="아이템 정보", description="공 + 20 ~ 25 [랜덤]\n"
                                                           "방 - 15\n"
                                                           "[6발 - 6발]\n\n"
                                                           "깊은 지하의 무덤 레이드 - 암흑 골로스 전리품 랜덤 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!열공의도끼"):
+    elif message.content == ("~열공의도끼"):
         embed = discord.Embed(title="아이템 정보", description="공 + 70 ~ 77 [랜덤]\n"
                                                           "방 - 10 ~ 12 [랜덤]\n"
                                                           "민 - 30"
                                                           "크리티컬 + 7%\n\n"
                                                           "하이하모 동106,남574 상인 리버 30RP+10만스톤 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!지옥의투구"):
+    elif message.content == ("~지옥의투구"):
         embed = discord.Embed(title="아이템 정보", description="공 + 1 ~ 5 [랜덤]\n"
                                                           "방 + 15 ~ 18 [랜덤]\n"
                                                           "부활의 정령 Lv.2\n\n"
                                                           "지옥문 레이드 - 헬타우르스의 방 또는 지옥의 암석(60개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!지옥견털옷"):
+    elif message.content == ("~지옥견털옷"):
         embed = discord.Embed(title="아이템 정보", description="방 + 18 ~ 20 [랜덤]\n"
                                                           "순 + 15\n"
                                                           "내 + 5 ~ 10 [랜덤]\n"
                                                           "무지개의 정령\n\n"
                                                           "지옥문 레이드 - 헬베로스의 방 또는 지옥의 암석(100개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!헤티아의머리장식"):
+    elif message.content == ("~헤티아의머리장식"):
         embed = discord.Embed(title="아이템 정보", description="공 + 5\n"
                                                           "방 + 15\n"
                                                           "무지개의 정령\n\n"
                                                           "헤티아의 보물의 방에서 5%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!초신성갑옷"):
+    elif message.content == ("~초신성갑옷"):
         embed = discord.Embed(title="아이템 정보", description="공 + 5\n"
                                                           "방 + 40\n"
                                                           "민 - 10\n"
                                                           "윤택의 정령 Lv.5\n\n"
                                                           "헤티아의 보물의 방에서 5%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!얼음옷"):
+    elif message.content == ("~얼음옷"):
         embed = discord.Embed(title="아이템정보", description="얼음 옷", color=0xAC58FA)
         embed.set_footer(text="공 + 5 ~ 7(랜덤)\n방 + 20\n내 + 10 ~ 20(랜덤)\n치유의 정령 Lv.4\n\n하이하모 동106, 남574 상인 리버 30RP+10만스톤 구매")
         embed.set_image(url="http://121.149.113.201/File/레이드아이템/" + message.content + ".png")
         await message.channel.send(embed=embed)
-    elif message.content == ("!얼음옷"):
+    elif message.content == ("~얼음옷"):
         embed = discord.Embed(title="아이템 정보", description="공 + 5 ~ 7 [랜덤]\n"
                                                           "방 + 20\n"
                                                           "내 + 10 ~ 20 [랜덤]\n"
                                                           "치유의 정령 Lv.4\n\n"
                                                           "하이하모 동106, 남574 상인 리버 30RP+10만스톤 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!얼음투구"):
+    elif message.content == ("~얼음투구"):
         embed = discord.Embed(title="아이템 정보", description="방 + 15\n"
                                                           "내 + 10 ~ 15 [랜덤]\n\n"
                                                           "하이하모 동106, 남574 상인 리버 30RP+10만스톤 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
         #레이드장신구
-    elif message.content == ("!바르의바람"):
+    elif message.content == ("~바르의바람"):
         embed = discord.Embed(title="아이템 정보", description="민 + 3~7 [랜덤]\n"
                                                           "내구력 + 5~20 [랜덤]\n\n"
                                                           "얼음성레이드 : 흑룡의 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!머슬링귀걸이"):
+    elif message.content == ("~머슬링귀걸이"):
         embed = discord.Embed(title="아이템 정보", description="공 + 1~5 [랜덤]\n"
                                                           "회피율 확률 + 7%\n\n"
                                                           "얼음성레이드 : 메피노 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!번개의반지"):
+    elif message.content == ("~번개의반지"):
         embed = discord.Embed(title="아이템 정보", description="민 + 1~5 [랜덤]\n"
                                                           "크리티컬 확률 + 7%\n\n"
                                                           "얼음성레이드 : 테로노돈 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!티아트의대지"):
+    elif message.content == ("~티아트의대지"):
         embed = discord.Embed(title="아이템 정보", description="방 + 3 ~ 7 [랜덤]\n"
                                                           "내구력 + 5 ~ 20 [랜덤]\n\n"
                                                           "얼음성레이드 : 메피노의 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!기계심장"):
+    elif message.content == ("~기계심장"):
         embed = discord.Embed(title="아이템 정보", description="공 + 2\n"
                                                           "방 + 2\n"
                                                           "순 + 2\n"
@@ -630,7 +630,7 @@ async def on_message(message):
                                                           "하단 2번슬롯에 장착\n\n"
                                                           "하이하모 동106, 남574 상인 리버에게 30RP로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!골로스의심장"):
+    elif message.content == ("~골로스의심장"):
         embed = discord.Embed(title="아이템 정보", description="공 + 2 ~ 5 [랜덤]\n"
                                                           "방 + 2 ~ 5 [랜덤]\n"
                                                           "순 + 2 ~ 5 [랜덤]\n"
@@ -638,7 +638,7 @@ async def on_message(message):
                                                           "하단 2번슬롯에 장착\n\n"
                                                           "골로스 전리품", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!정령의반지"):
+    elif message.content == ("~정령의반지"):
         embed = discord.Embed(title="아이템 정보", description="공 + 2 ~ 3 [랜덤]\n"
                                                           "방 + 2 ~ 3 [랜덤]\n"
                                                           "순 + 2 ~ 3 [랜덤]\n"
@@ -646,13 +646,13 @@ async def on_message(message):
                                                           "반지에 부여된속성 + 2\n\n"
                                                           "칠흑의 정령 레이드 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!타우루스의부적"):
+    elif message.content == ("~타우루스의부적"):
         embed = discord.Embed(title="아이템 정보", description="공 + 1 ~ 5 [랜덤]\n"
                                                           "내 + 20\n"
                                                           "고등정화의 정령\n\n"
                                                           "지옥문 레이드 - 헬타우루스의 방 또는 지옥의 암석(60개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!지옥의전리품"):
+    elif message.content == ("~지옥의전리품"):
         embed = discord.Embed(title="아이템 정보", description="공 + 1 ~ 3 [랜덤]\n"
                                                           "방 + 1 ~ 3 [랜덤]\n"
                                                           "순 + 1 ~ 3 [랜덤]\n"
@@ -660,28 +660,28 @@ async def on_message(message):
                                                           "하단 3번슬롯에 장착\n\n"
                                                           "지옥문 레이드 - 헬바이론의 방 또는 지옥의 암석(80개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!지옥의반지"):
+    elif message.content == ("~지옥의반지"):
         embed = discord.Embed(title="아이템 정보", description="공 + 2 ~ 7 [랜덤]\n"
                                                           "내 + 15 ~ 20 [랜덤]\n"
                                                           "크리티컬 + 5% ~ 7% [랜덤]\n\n"
                                                           "지옥문 레이드 - 헬베로스의 방 또는 지옥의 암석(100개)으로 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!풍신주머니"):
+    elif message.content == ("~풍신주머니"):
         embed = discord.Embed(title="아이템 정보", description="민 + 5 ~ 8 [랜덤]\n"
                                                           "토템3 효과\n\n"
                                                           "헤티아의 보물의 방에서 2%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!대지의심장"):
+    elif message.content == ("~대지의심장"):
         embed = discord.Embed(title="아이템 정보", description="방 + 5 ~ 8 [랜덤]\n"
                                                           "토템3 효과\n\n"
                                                           "헤티아의 보물의 방에서 2%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!불사조의정신"):
+    elif message.content == ("~불사조의정신"):
         embed = discord.Embed(title="아이템 정보", description="공 + 5 ~ 8 [랜덤]\n"
                                                           "토템3 효과\n\n"
                                                           "헤티아의 보물의 방에서 2%확률로 드랍", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!삼위일체"):
+    elif message.content == ("~삼위일체"):
         embed = discord.Embed(title="아이템 정보", description="공 + 1 ~ 10 [랜덤]\n"
                                                           "방 + 1 ~ 10 [랜덤]\n"
                                                           "순 + 1 ~ 10 [랜덤]\n\n"
@@ -693,31 +693,31 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
         
-    elif message.content == ("!이라의불꽃"):
+    elif message.content == ("~이라의불꽃"):
         embed = discord.Embed(title="아이템 정보", description="공 + 3 ~ 7 [랜덤]\n"
                                                           "내 + 5 ~ 20 [랜덤]\n\n"
                                                           "얼음성 레이드 - 헤티아 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!영웅의신물"):
+    elif message.content == ("~영웅의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 5 포인트 랜덤 능력치 부여\n\n"
                                                           "하이하모 (동106, 남574) 상인 리버에게 30RP로 구매\n\n"
                                                           "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                                                          "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!영광의신물"):
+    elif message.content == ("~영광의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 10 포인트 랜덤 능력치 부여\n\n"
                                                           "얼음성 레이드 - 암흑 헤티아의 전리품\n\n"
                               "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                               "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
         
-    elif message.content == ("!지옥의신물"):
+    elif message.content == ("~지옥의신물"):
         embed = discord.Embed(title="아이템 정보", description="장착시 15 포인트 랜덤 능력치 부여\n\n"
                                                           "얼음성 레이드 - 암흑 헤티아의 전리품\n\n"
                              "아이템 능력치는 포인트를 랜덤으로 능력치를 부여하며, 공격력 방어력 순발력 내구력 관통 쉴드 중 랜덤으로 능력치가 설정됩니다.\n"
                               "단일 능력치는 최대 5개까지만 부여되며, 내구력은 1포인트당 3의 능력치를 얻습니다.", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!합성창"):
+    elif message.content == ("~합성창"):
         embed = discord.Embed(title="아이템 정보", description="공 + 58 ~ 40\n민 - 11 ~ 15\n크리티컬 + 5%\n\n"
                                                           "나무9 + 상아9\n\n"
                              "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비\n\n"
@@ -725,7 +725,7 @@ async def on_message(message):
                                                         "- 정령의 마을(동80 남22)에 위치한 편의점\n"
                                                         "- 석상3 소재는 소재보따리에서 랜덤으로만 획득 가능\n", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!합성투구"):
+    elif message.content == ("~합성투구"):
         embed = discord.Embed(title="아이템 정보", description="방 + 25 ~ 17\n민 - 5 ~ 7\n\n"
                                                           "가죽9 + 뼈9\n\n"
                                                           "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비"
@@ -733,7 +733,7 @@ async def on_message(message):
                                                           "- 정령의 마을(동80 남22)에 위치한 편의점\n"
                                                           "- 석상3 소재는 소재보따리에서 랜덤으로만 획득 가능\n",color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!합성갑옷"):
+    elif message.content == ("~합성갑옷"):
         embed = discord.Embed(title="아이템 정보", description="방 + 46 ~ 32\n민 - 10 ~ 14\n\n"
                                                           "가죽9 + 돌9\n\n"
                                                           "가공추천페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비"
@@ -743,41 +743,41 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         
         #레이드소모템
-    elif message.content == ("!영혼의서약"):
+    elif message.content == ("~영혼의서약"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 영구적으로 탑승페트의 경험치 획득 5% 상승[최대 1회]\n\n"
                                                           "골로스 전리품 레어 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
 
         #큐브
-    elif message.content == ("!일반큐브"):
+    elif message.content == ("~일반큐브"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 아이템을 강화한다.\n\n"
                               "획득방법\n"
                               "접속 보상상자 또는 샴기르 이벤트NPC를 통해 구매", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!장인의큐브"):
+    elif message.content == ("~장인의큐브"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 아이템을 강화한다. [+5%확률 증가)\n\n"
                               "획득방법\n"
                               "2등복권 보상", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!고급큐브"):
+    elif message.content == ("~고급큐브"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 아이템을 강화한다. [+10%확률 증가)\n\n"
                               "획득방법\n"
                               "[금빛 보물상자] [은빛 보물상자]에서 랜덤 획득 가능", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!청록큐브"):
+    elif message.content == ("~청록큐브"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 아이템을 강화한다. [+15%확률 증가)\n\n"
                               "획득방법\n"
                               "[천상의 보물상자]에서 랜덤 획득 가능", color=0xAC58FA)
         await message.channel.send(embed=embed)
-    elif message.content == ("!적색큐브"):
+    elif message.content == ("~적색큐브"):
         embed = discord.Embed(title="아이템 정보", description="사용 시 아이템을 강화한다. [+20%확률 증가)\n\n"
                               "획득방법\n"
                               "헤티아이상 레이드 보상에서 랜덤 획득 가능", color=0xAC58FA)
         await message.channel.send(embed=embed)
 
 
-    elif message.content.startswith('!'):
-        await message.channel.send("```명령어가 존재하지않습니다.\n!명령어 <-를 입력하여 명령어를 확인해주세요.```")
+    elif message.content.startswith('~'):
+        await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```")
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
