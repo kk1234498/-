@@ -76,7 +76,7 @@ async def on_message(message):
             await message.channel.send(message.channel, embed=discord.Embed(description=':v:'))
         if randomNum == 6:
             await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
-    elif message.content == ("=노래봇명령어"):
+    elif message.content == ("~노래봇명령어"):
         await message.channel.send("```!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
                                         "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n"
                                         "!!대기열 - [노래 대기열을 확인합니다.]\n"
