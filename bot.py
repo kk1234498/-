@@ -41,7 +41,7 @@ async def on_message(message):
                                                           "~기무3\n"
                                                           "~지옥문\n",
         color = 0xFF0000)
-        await message.channel.send(embed=embed , delete_after=60.0)
+        await message.channel.send(embed=embed , delete_after=1.0)
 
 
 
