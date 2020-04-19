@@ -41,7 +41,7 @@ async def on_message(message):
                                                           "~기무3\n"
                                                           "~지옥문\n",
         color = 0xFF0000)
-        await message.channel.send(embed=embed , delete_after=3.0)
+        await message.channel.send(embed=embed , delete_after=30.0)
     elif message.content == ("~노래봇명령어"):
         await message.channel.send("```!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
                                         "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n"
