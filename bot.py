@@ -18,7 +18,7 @@ async def on_message(message):
     now = datetime.datetime.now()
     if message.content == ("~명령어"):
         embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
-                                                          "~홈피\n~돈페트\n~아이템이름\n~주사위\n~가위바위보\n~노래봇명령어\n"
+                                                          "~홈피\n~돈페트\n~아이템이름\n~노래봇명령어\n"
                                                           "~허환작\n~독뎀\n~환포퀘\n~강화\n~경험치테이블\n~합성재료\n~합성토템\n~페트푸드\n"
                                                           "~환포계산기\n~압물\n~복권\n\n"
                                                           "[듀얼관련]\n"
@@ -41,41 +41,7 @@ async def on_message(message):
                                                           "~기무3\n"
                                                           "~지옥문\n",
         color = 0xFF0000)
-        await message.channel.send(embed=embed , delete_after=1.0)
-
-
-
-
-    elif message.content == ("~주사위"):
-        randomNum = random.randrange(1, 7)  # 1~6까지 랜덤수
-        print(randomNum)
-        if randomNum == 1:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':one:'))
-        if randomNum == 2:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':two:'))
-        if randomNum == 3:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':three:'))
-        if randomNum == 4:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':four:'))
-        if randomNum == 5:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':five:'))
-        if randomNum == 6:
-            await message.channel.send(message.channel, embed=discord.Embed(description= ':six: '))
-    elif message.content == ("~가위바위보"):
-        randomNum = random.randrange(1, 7)  # 1~6까지 랜덤수
-        print(randomNum)
-        if randomNum == 1:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':hand_splayed::skin-tone-2:'))
-        if randomNum == 2:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':v:'))
-        if randomNum == 3:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
-        if randomNum == 4:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':hand_splayed::skin-tone-2:'))
-        if randomNum == 5:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':v:'))
-        if randomNum == 6:
-            await message.channel.send(message.channel, embed=discord.Embed(description=':fist:'))
+        await message.channel.send(embed=embed , delete_after=3.0)
     elif message.content == ("~노래봇명령어"):
         await message.channel.send("```!!s 노래제목 - [노래를 검색합니다. 하단숫자를눌러 선택가능]\n"
                                         "!!재생 노래제목 - [해당노래를 대기열에 바로추가합니다.]\n"
