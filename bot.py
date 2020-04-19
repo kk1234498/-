@@ -84,12 +84,11 @@ async def on_message(message):
                                    "[추천명령어 : !!재생 멜론 - [멜론노래가 똭!]```")
         
         
-
+        
+        
     elif message.content == ("~홈피"):
         await message.channel.send("https://fresh01.net/main")
 
-    elif message.content.startswith("물이슬"):
-        await message.channel.send("나의 세상 나의 빛 아이즈원")
     elif message.content == ("~골드볼라"):
         await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```")
         
