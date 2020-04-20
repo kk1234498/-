@@ -495,4 +495,4 @@ async def on_message(message):
         await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=60.0)
 
 access_token = os.environ["BOT_TOKEN"]
-client.run(access_token)
+client.run(access_token11111111)
