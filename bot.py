@@ -8,7 +8,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    print("봇가동이 완료되었습니다.")
+    111111111print("봇가동이 완료되었습니다.")
 
     game = discord.Game("~명령어 로 명령어확인가능")
     await client.change_presence(status=discord.Status.online, activity=game)
