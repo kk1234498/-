@@ -492,7 +492,7 @@ async def on_message(message):
                                    "듀얼당일 7시20분까지 미리 모여주셔야합니다.\n\n```", delete_after=60.0)
 
     elif message.content.startswith('~'):
-        await message.channel.send("```명령어가 존재하지않습니다.\n!명령어 <-를 입력하여 명령어를 확인해주세요.```")
+        await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=60.0)
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
