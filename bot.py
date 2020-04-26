@@ -42,24 +42,24 @@ async def on_message(message):
             await asyncio.sleep(1)
             await message.delete()
 
-    elif message.content == ("~홈피"):
-        await message.channel.send("https://fresh01.net/main", delete_after=60.0)
-        await asyncio.sleep(1)
+        elif message.content == ("~홈피"):
+            await message.channel.send("https://fresh01.net/main", delete_after=60.0)
+            await asyncio.sleep(1)
             await message.delete()
-    elif message.content == ("~골드볼라"):
-        await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```" , delete_after=60.0)
-        await asyncio.sleep(1)
+        elif message.content == ("~골드볼라"):
+            await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```" , delete_after=60.0)
+            await asyncio.sleep(1)
             await message.delete()
 
-    elif message.content == ("~복권"):
-        await message.channel.send(
+        elif message.content == ("~복권"):
+            await message.channel.send(
             "```1등복권 - 상급돈펫\n[샴기르 - 실버우리]\n[마리너스 - 노르노르] \n[쟈쟈 - 크루거]\n[카루타나 - 프리토스]\n[파론 - 헤르마루]\n[후르도 - 베르마루]\n[호미곳 - 베라라]\n\n"
             "2등복권 - [장인의 큐브]\n"
             "3등복권 - [3만스톤]\n"
             "4등복권 - [5천스톤]\n"
             "5등복권 - [천스톤]\n"
             "6등복권 - [500스톤]```", delete_after=60.0)
-        await asyncio.sleep(1)
+            await asyncio.sleep(1)
             await message.delete()
 
 
