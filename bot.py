@@ -14,9 +14,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-            if message.author == client.user:
-            return
-            if message.content == ("~명령어"):
+    if message.author == client.user:
+        return
+
+    elif message.content == ("~명령어"):
             embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
                                                               "~홈피\n~돈페트\n~주사위\n~가위바위보\n~듀얼신청\n~노래봇명령어\n"
                                                               "~허환작\n~독뎀\n~환포퀘\n~강화\n~경험치테이블\n~합성재료\n~합성토템\n~페트푸드\n"
@@ -40,20 +41,20 @@ async def on_message(message):
                                                               "~기무3\n"
                                                               "~지옥문\n",
                                   color=0xFF0000)
-            await message.channel.send(embed=embed)
+            await message.channel.send(embed=embed, delete_after=3.0)
             await asyncio.sleep(1)
             await message.delete()
 
-        elif message.content == ("~홈피"):
+    elif message.content == ("~홈피"):
             await message.channel.send("https://fresh01.net/main", delete_after=60.0)
             await asyncio.sleep(1)
             await message.delete()
-        elif message.content == ("~골드볼라"):
+    elif message.content == ("~골드볼라"):
             await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```" , delete_after=60.0)
             await asyncio.sleep(1)
             await message.delete()
 
-        elif message.content == ("~복권"):
+    elif message.content == ("~복권"):
             await message.channel.send(
             "```1등복권 - 상급돈펫\n[샴기르 - 실버우리]\n[마리너스 - 노르노르] \n[쟈쟈 - 크루거]\n[카루타나 - 프리토스]\n[파론 - 헤르마루]\n[후르도 - 베르마루]\n[호미곳 - 베라라]\n\n"
             "2등복권 - [장인의 큐브]\n"
@@ -66,7 +67,7 @@ async def on_message(message):
 
 
     elif message.content == ("~합성토템"):
-        await message.channel.send("```합성 토템 정보\n\n"
+            await message.channel.send("```합성 토템 정보\n\n"
                                    "합성 토템 1 : 전투 종료 HP 30 회복\n"
                                    "합성 토템 2 : 전투 종료 HP 40 회복\n"
                                    "합성 토템 3 : 전투 종료 HP 50 회복 + 기습 방지\n\n"
@@ -83,7 +84,7 @@ async def on_message(message):
                                    "악세사리 - 골드부비```", delete_after=60.0)
 
     elif message.content == ("~돈페트"):
-        await message.channel.send("```돈페트 정보 \n최상급 페트 - 1등급\n상급페트 - 2등급\n초보자 두리 육성 퀘스트 - 우리스타(상급)\n루니/베르가 포획 퀘스트 "
+            await message.channel.send("```돈페트 정보 \n최상급 페트 - 1등급\n상급페트 - 2등급\n초보자 두리 육성 퀘스트 - 우리스타(상급)\n루니/베르가 포획 퀘스트 "
                                    "- 쿠보(상급), 노보(상급)\n채석장의 비밀 - 모나시프(상급), 라나프(상급), 프이토(상급)\n카난 이벤트 - 휴보(상급)\n퀴즈 "
                                    "마스터 - 골드부비(상급), 얼룩부이비(상급)\n마쥬의 우편배달 - 차이혼(상급), 파라프(상급)\n밤미를 갖고싶어 - 알테로스("
                                    "상급)\n환생 이벤트 - 환생얼룩우리(최상급), 투이(상급), 골로스(최상급)\n다섯가지의 관문(6환생) - 파르체(최상급), "
