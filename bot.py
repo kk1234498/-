@@ -39,8 +39,6 @@ async def on_message(message):
                                                           "~지옥문\n",
         color = 0xFF0000)
         await message.channel.send(embed=embed , delete_after=60.0)
-        await asyncio.sleep(1)
-        await message.delete()
 
     elif message.content == ("~홈피"):
         await message.channel.send("https://fresh01.net/main", delete_after=60.0)
