@@ -14,36 +14,42 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content == ("~명령어"):
-        embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
-                                                          "~홈피\n~돈페트\n~주사위\n~가위바위보\n~듀얼신청\n~노래봇명령어\n"
-                                                          "~허환작\n~독뎀\n~환포퀘\n~강화\n~경험치테이블\n~합성재료\n~합성토템\n~페트푸드\n"
-                                                          "~환포계산기\n~압물\n~복권\n\n"
-                                                          "[듀얼관련]"
-                                                          "~공식듀얼\n"
-                                                          "~개인듀얼\n"
-                                                          "[레이드관련]\n"
-                                                          "~레이드\n"
-                                                          "~마을레이드\n"
-                                                          "~수룡\n"
-                                                          "~칠흑\n"
-                                                          "~흑룡\n"
-                                                          "~헤티아\n"
-                                                          "~창티아\n"
-                                                          "~활티아\n"
-                                                          "~보물방활\n"
-                                                          "~보물방창\n"
-                                                          "~기무1\n"
-                                                          "~기무2\n"
-                                                          "~기무3\n"
-                                                          "~지옥문\n",
-        color = 0xFF0000)
-        await message.channel.send(embed=embed , delete_after=60.0)
+            elif message.content == ("~명령어"):
+            embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
+                                                              "~홈피\n~돈페트\n~주사위\n~가위바위보\n~듀얼신청\n~노래봇명령어\n"
+                                                              "~허환작\n~독뎀\n~환포퀘\n~강화\n~경험치테이블\n~합성재료\n~합성토템\n~페트푸드\n"
+                                                              "~환포계산기\n~압물\n~복권\n\n"
+                                                              "[듀얼관련]"
+                                                              "~공식듀얼\n"
+                                                              "~개인듀얼\n"
+                                                              "[레이드관련]\n"
+                                                              "~레이드\n"
+                                                              "~마을레이드\n"
+                                                              "~수룡\n"
+                                                              "~칠흑\n"
+                                                              "~흑룡\n"
+                                                              "~헤티아\n"
+                                                              "~창티아\n"
+                                                              "~활티아\n"
+                                                              "~보물방활\n"
+                                                              "~보물방창\n"
+                                                              "~기무1\n"
+                                                              "~기무2\n"
+                                                              "~기무3\n"
+                                                              "~지옥문\n",
+                                  color=0xFF0000)
+            await message.channel.send(embed=embed)
+            await asyncio.sleep(1)
+            await message.delete()
 
     elif message.content == ("~홈피"):
         await message.channel.send("https://fresh01.net/main", delete_after=60.0)
+        await asyncio.sleep(1)
+            await message.delete()
     elif message.content == ("~골드볼라"):
         await message.channel.send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```" , delete_after=60.0)
+        await asyncio.sleep(1)
+            await message.delete()
 
     elif message.content == ("~복권"):
         await message.channel.send(
@@ -53,6 +59,8 @@ async def on_message(message):
             "4등복권 - [5천스톤]\n"
             "5등복권 - [천스톤]\n"
             "6등복권 - [500스톤]```", delete_after=60.0)
+        await asyncio.sleep(1)
+            await message.delete()
 
 
     elif message.content == ("~합성토템"):
