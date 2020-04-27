@@ -554,6 +554,8 @@ async def on_message(message):
         channel = 692324317953785867
         await client.get_channel(int(channel)).send("부족듀얼신청합니다.\n" + message.author.display_name)
         await message.channel.send("```신청이 완료되었습니다.```", delete_after=60.0)
+        await asyncio.sleep(5)
+        await message.delete()
     elif message.content.startswith('~'):
         await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=60.0)
         await asyncio.sleep(5)
