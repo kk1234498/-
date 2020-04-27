@@ -21,7 +21,7 @@ async def on_message(message):
             embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
                                                               "~홈피\n~돈페트\n~주사위\n~가위바위보\n~듀얼신청\n~노래봇명령어\n"
                                                               "~허환작\n~독뎀\n~환포퀘\n~강화\n~경험치테이블\n~합성재료\n~합성토템\n~페트푸드\n"
-                                                              "~환포계산기\n~압물\n~복권\n\n"
+                                                              "~환포계산기\n~압물\n~복권\n"
                                                               "[듀얼관련]\n"
                                                               "~공식듀얼\n"
                                                               "~개인듀얼\n"
