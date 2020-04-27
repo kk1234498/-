@@ -124,6 +124,8 @@ async def on_message(message):
                                    "완캐 : [체력] ???이상 / [활탑공] 380이상\n페트 : [수속성]Lv.120이상\n\n"
                                    "공략방법\n[리더] 스펙에따라 2~4마리 죽을때까지 가드\n[활캐] 메갈로돈 AI순서대로 공격\n[순캐] 첫턴 상대몹에 오로라 /  두번째턴 수우대\n[페트] 수우대걸릴때까지 충견 이후 배진\n\n"
                                    "플레이중 혼란에걸리면 반드시 로그아웃후 재입장하셔야합니다.```", delete_after=60.0)
+         await asyncio.sleep(5)
+         await message.delete()
         # 완료
     elif message.content == ("~흑룡"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.\n\n"
@@ -491,7 +493,7 @@ async def on_message(message):
         embed.set_footer(
             text="노환 : 경험치 100퍼 추가경험치\n1환 : 경험치 80퍼 추가경험치\n2환 : 60퍼 추가경험치")
         embed.set_image(
-            url="https://fresh01.net/files/attach/images/11875/483/030/57dfdbecdcb20bcfdb6fae622339b5d9.jpg")
+            url="https://media.discordapp.net/attachments/692359323312980069/697768959256166404/unknown.png?width=783&height=676")
         await message.channel.send(embed=embed, delete_after=60.0)
         await asyncio.sleep(5)
         await message.delete()
@@ -504,7 +506,7 @@ async def on_message(message):
                  "* 합성 반지 4 의 경우 속성 부여시 해당 속성 소재7 로 하시는 게 가장 가공 점수와 일치하여 성공률이 높습니다.\n\n"
                  "* 가공 추천 페트 : 무기류 - 케이비 / 방어구 - 북이, 돌북이 / 악세사리 - 골드부비")
         embed.set_image(
-            url="https://fresh01.net/files/attach/images/11875/969/034/da68a94bcee8af5b18d40a994aba7e02.jpg")
+            url="https://fresh01.net/files/attach/images/387452/598/387/bffded798f59bcaf9d6715ec475a989a.jpg")
         await message.channel.send(embed=embed, delete_after=60.0)
         await asyncio.sleep(5)
         await message.delete()
