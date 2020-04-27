@@ -593,7 +593,7 @@ async def on_message(message):
         await asyncio.sleep(5)
         await message.delete()
     elif message.content.startswith('~'):
-        await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=10.0)
+        await message.channel.send("```명령어가 존재하지않습니다.\nbot채널에서 명령어를 확인해주세요.```", delete_after=10.0)
         await asyncio.sleep(5)
         await message.delete()
 access_token = os.environ["BOT_TOKEN"]
