@@ -124,8 +124,8 @@ async def on_message(message):
                                    "완캐 : [체력] ???이상 / [활탑공] 380이상\n페트 : [수속성]Lv.120이상\n\n"
                                    "공략방법\n[리더] 스펙에따라 2~4마리 죽을때까지 가드\n[활캐] 메갈로돈 AI순서대로 공격\n[순캐] 첫턴 상대몹에 오로라 /  두번째턴 수우대\n[페트] 수우대걸릴때까지 충견 이후 배진\n\n"
                                    "플레이중 혼란에걸리면 반드시 로그아웃후 재입장하셔야합니다.```", delete_after=60.0)
-         await asyncio.sleep(5)
-         await message.delete()
+        await asyncio.sleep(5)
+        await message.delete()
         # 완료
     elif message.content == ("~흑룡"):
         await message.channel.send("```※ 본문은 완캐 위주로 설명이 되어있으며, 파티 마다 요구 스펙이 다를 수 있습니다.\n\n"
