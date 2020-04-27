@@ -49,12 +49,12 @@ async def on_message(message):
         await message.delete()
 
     elif message.content == ("~홈피"):
-        await message.channel.send("https://fresh01.net/main", delete_after=60.0)
+        await message.channel.send("https://fresh01.net/main", delete_after=30.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~골드볼라"):
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```", delete_after=60.0)
+        await client.get_channel(int(channel)).send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```", delete_after=30.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -87,7 +87,7 @@ async def on_message(message):
                                    "가공 추천 페트\n"
                                    "무기류 - 케이비\n"
                                    "방어구 - 북이 / 돌북이\n"
-                                   "악세사리 - 골드부비```", delete_after=60.0)
+                                   "악세사리 - 골드부비```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -100,7 +100,7 @@ async def on_message(message):
                                    "슈발리(최상급), 지발리(최상급), 샤르체(최상급)\n복권 페트 - 크루거상급), 프리토스(상급), 실버우리(상급), 노르노르(상급), "
                                    "베라라(상급), 베르마루(상급), 헤르마루(상급)\n개인듀얼 페트병 - 황금복덩이(상급)\n이벤트 페트 - 복우리(상급), "
                                    "로라미우스(상급), 고로(상급)\n페트 자판기(아이템 자판기) - 라이혼(최상급), 타이혼(최상급)\n140보상페트 - 다크울프 (상급), "
-                                   "막쿠마(상급), 디사크(상급), 문울프(상급)```", delete_after=60.0)
+                                   "막쿠마(상급), 디사크(상급), 문울프(상급)```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -109,7 +109,7 @@ async def on_message(message):
         await client.get_channel(int(channel)).send("```레이드는 일주일에 계정마다 20(15회기본 5회 구입)회 진행 가능하며, 매주 일요일 0시에 초기화됩니다.\n"
                                    "레이드 클리어시에 보스마다 전리품을 각 플레이어에게 지급해줍니다. 여기서 기본으로 1 레이드포인트가 뜨고, 레어템은 각 전리품마다 낮은 확률로 뜰수가 "
                                    "있습니다.\n\n레이드의 종류\n[마을 레이드]\n[얼음성 레이드]\n[기계무덤 레이드]\n[용 소탕 레이드]\n[칠흑의 정령 레이드]\n[지옥문 레이드] ```",
-                                   delete_after=60.0)
+                                   delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -120,7 +120,7 @@ async def on_message(message):
                                    "마리너스 마을 : 동62,남120 NPC감염된 액체에서 입장\n"
                                    "쟈쟈 마을 : 동99,남63 우물안 동6,남10 NPC도적기리에서 입장\n"
                                    "카루타나 마을 : 카루타나 목장 앞 쟈루(동328, 남650) 부근에서 전투시 일정 확률로 문울프가 등장합니다. 문울프를 처치시완료\n\n레이드중 가장쉽다.```",
-                                   delete_after=60.0)
+                                   delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -135,7 +135,7 @@ async def on_message(message):
                                    "순캐 : [체력] ???이상 / [탑순] 300이상 / [주술1] 은혜의정령 Lv.6 / [주술2] 오로라의 정령\n"
                                    "완캐 : [체력] ???이상 / [활탑공] 380이상\n페트 : [수속성]Lv.120이상\n\n"
                                    "공략방법\n[리더] 스펙에따라 2~4마리 죽을때까지 가드\n[활캐] 메갈로돈 AI순서대로 공격\n[순캐] 첫턴 상대몹에 오로라 /  두번째턴 수우대\n[페트] 수우대걸릴때까지 충견 이후 배진\n\n"
-                                   "플레이중 혼란에걸리면 반드시 로그아웃후 재입장하셔야합니다.```", delete_after=60.0)
+                                   "플레이중 혼란에걸리면 반드시 로그아웃후 재입장하셔야합니다.```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -157,13 +157,13 @@ async def on_message(message):
                                    "[활캐] - 1번흑기린부터 공격\n"
                                    "[순캐] - 첫턴 수우대 / 힐반복"
                                    "[페트] - 배수의 진 1번흑기린부터\n\n"
-                                   "흑룡은 가장나중에 공격합니다.```", delete_after=60.0)
+                                   "흑룡은 가장나중에 공격합니다.```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
     elif message.content == ("~헤티아"):
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send("```~창티아 & ~활티아를 이용해주세요.```", delete_after=60.0)
+        await client.get_channel(int(channel)).send("```~창티아 & ~활티아를 이용해주세요.```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -188,7 +188,7 @@ async def on_message(message):
                                    "완캐 : 언딘2마리와 헤티아 무지개 / 페트 충견 옆페트공격\n"
                                    "순캐 : 화우대 / 힐 반복 / 페트 충견 옆페트공격\n\n"
                                    "잡는순서\n"
-                                   "앞줄 AI순서 흑룡부터 순서대로 처치후 언딘 -> 헤티아 / 페트 일공```", delete_after=60.0)
+                                   "앞줄 AI순서 흑룡부터 순서대로 처치후 언딘 -> 헤티아 / 페트 일공```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -213,7 +213,7 @@ async def on_message(message):
                                    "완캐 : 언딘2마리와 헤티아 무지개 / 페트 충견 옆페트공격\n"
                                    "순캐 : 화우대 / 힐 반복 / 페트 배진2\n\n"
                                    "잡는순서\n"
-                                   "활은 AI순서대로 공격 / 페트 배진2 윗언딘먼저 그다음 아랫언딘```", delete_after=60.0)
+                                   "활은 AI순서대로 공격 / 페트 배진2 윗언딘먼저 그다음 아랫언딘```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~보물방활"):
@@ -248,12 +248,12 @@ async def on_message(message):
 
                                    "첫턴 이후\n"
                                    "[완캐] - 백룡-청룡-주작-헤티아-풍백-현무 순서 / 페트 배진\n"
-                                   "[순캐] - 우대, 힐반복 / 페트 배진 @우대안끊어지도록 주의```", delete_after=60.0)
+                                   "[순캐] - 우대, 힐반복 / 페트 배진 @우대안끊어지도록 주의```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~보물방창"):
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send("```솔직히 활팟이 더좋은거같음 굳이 적어야해요?```", delete_after=60.0)
+        await client.get_channel(int(channel)).send("```솔직히 활팟이 더좋은거같음 굳이 적어야해요?```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~기무1"):
@@ -275,7 +275,7 @@ async def on_message(message):
                                    "중순 : 원숭이(드리오쿠스) 죽기전까지 수우대사용\n"
                                    "고순 : 첫턴 수우대 이후 힐 반복\n"
                                    "페트 : 원숭이(드리오쿠스) 뒷줄 역AI순으로 배수의진2 \n"
-                                   "이후 흑귀 -> 골로스순 처치```", delete_after=60.0)
+                                   "이후 흑귀 -> 골로스순 처치```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~기무2"):
@@ -306,7 +306,7 @@ async def on_message(message):
                                    "[아래 닉스도 위 닉스 잡을때와 동일하게 플레이]\n\n"
                                    "공략방법 [닉스가 모두 죽은후]\n"
                                    "완캐들 : [로그아웃 이후 노탑활로 바꿔서 빠르게 들어옵니다.]\n"
-                                   "그후 뒷줄 원숭이부터 공격```", delete_after=60.0)
+                                   "그후 뒷줄 원숭이부터 공격```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~기무3"):
@@ -333,7 +333,7 @@ async def on_message(message):
                                    "페트 리더 : 1) 오른쪽 골로스 배진 2) 왼쪽 골로스 배진 3) 테르가 2마리 이하 남으면 충견\n"
                                    "완캐 : 충견진돗개\n"
                                    "고순 : 1) 오른쪽 골로스 배진 2) 왼쪽 골로스 배진 3) 테르가 배진\n\n"
-                                   "정보제공자 - 썸데이```", delete_after=60.0)
+                                   "정보제공자 - 썸데이```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -396,7 +396,7 @@ async def on_message(message):
                                    "이후 1턴부터 반복\n\n"
                                    "※ 파티에 따라 찍완이 가장 낮은 완캐가 기력약, 수우대를 쓰지 않고\n"
                                    "순캐가 은혜의정령 대신 고급 호화 생선회를 경우가 존재합니다.\n\n"
-                                   "정보제공자 - 참이슬```", delete_after=60.0)
+                                   "정보제공자 - 참이슬```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -412,7 +412,7 @@ async def on_message(message):
                                    "순캐 : [탑순] 300이상 / [체력] 최소600이상 / [주술1] 오로라의정령 [주술2]수속성 우대(순2명일경우) [주술3] 은혜의 정령 Lv.6\n\n"
                                    "첫턴\n"
                                    "캐릭 : 오로라 & 수우대사용\n펫 : 충견 & 배수의 진(개인판단)\n\n첫턴이후\n순캐 : 은혜의정령사용, 오로라 & 수우대 턴 확인후 사용\n완캐 : 그냥 활공\n펫 : 배수의 진\n\n클리어이후 "
-                                   "빠르게 채널변경```", delete_after=60.0)
+                                   "빠르게 채널변경```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -421,7 +421,7 @@ async def on_message(message):
 
         channel = 703972929507033159
         await client.get_channel(int(channel)).send("```러시안 페트푸드1 [충성2전후 ] : 육포 + 물고기1\n"
-                                   " 러시안 페트푸드2 [충성5전후 상승] : 큰고기(고기3) + 물고기2 + 도토리3 + 해초4```", delete_after=60.0)
+                                   " 러시안 페트푸드2 [충성5전후 상승] : 큰고기(고기3) + 물고기2 + 도토리3 + 해초4```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -429,14 +429,14 @@ async def on_message(message):
         channel = 703972929507033159
         await client.get_channel(int(channel)).send("```아부의 성스러운 물이여 나에게 광채나는 힘을\n\n"
                                    "압물은 아부의동굴 6층에서 얻을수있습니다.\n\n"
-                                   "가격 : 100스톤```", delete_after=60.0)
+                                   "가격 : 100스톤```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~아부의물"):
         channel = 703972929507033159
         await client.get_channel(int(channel)).send("```아부의 성스러운 물이여 나에게 광채나는 힘을\n\n"
                                    "압물은 아부의동굴 6층에서 얻을수있습니다.\n\n"
-                                   "가격 : 100스톤```", delete_after=60.0)
+                                   "가격 : 100스톤```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -444,12 +444,12 @@ async def on_message(message):
     elif message.content == ("~공식듀얼"):
         channel = 703972929507033159
         await client.get_channel(int(channel)).send("```매주 일요일 7시30분 2채 투기장에서 진행\n\n부족내 듀얼신청은 !듀얼신청명령어로 신청 가능\n\n참여 기본보상 : 경험치 구슬 5시간 & "
-                                   "전쟁포인트 3```", delete_after=60.0)
+                                   "전쟁포인트 3```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~개인듀얼"):
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send("```매일 10시00분 듀얼채널에서 진행\n\n참여 기본보상 : 개인듀얼 포인트 3```", delete_after=60.0)
+        await client.get_channel(int(channel)).send("```매일 10시00분 듀얼채널에서 진행\n\n참여 기본보상 : 개인듀얼 포인트 3```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~허환작"):
@@ -468,14 +468,14 @@ async def on_message(message):
                                    "4대 퀘스트 20EP\n"
                                    "하이하모 입장 10EP\n"
                                    "오랑이(타이거 스피어) 15EP + 명성 350\n"
-                                   "조력자의 단서를 찾아서 20EP(4대깨면 워프로 한번에 이동가능)```", delete_after=60.0)
+                                   "조력자의 단서를 찾아서 20EP(4대깨면 워프로 한번에 이동가능)```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
 
     elif message.content == ("~환포계산기"):
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send("https://fresh01.net/tip/23672\n" + "```공식홈페이지 주소입니다.```", delete_after=60.0)
+        await client.get_channel(int(channel)).send("https://fresh01.net/tip/23672\n" + "```공식홈페이지 주소입니다.```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~독뎀"):
@@ -488,7 +488,7 @@ async def on_message(message):
                                    "능력치 35.75 ~ 41 독데미지 2\n\n"
                                    "능력치 41 ~ 45.5 독데미지 3\n\n"
                                    "능력치 45.5이상부터 독데미지 4\n\n"
-                                   "출처 : 프레쉬헌터채널```", delete_after=60.0)
+                                   "출처 : 프레쉬헌터채널```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -514,7 +514,7 @@ async def on_message(message):
                                    "퀴즈마스터 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=25025\n"
                                    "마쥬의 우편배달 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=25030\n"
                                    "4개의 보물 : https://fresh01.net/index.php?mid=quest&category=229&document_srl=25033",
-                                   delete_after=60.0)
+                                   delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
         # 완료
@@ -528,7 +528,7 @@ async def on_message(message):
         embed.set_image(
             url="https://media.discordapp.net/attachments/692359323312980069/697768959256166404/unknown.png?width=783&height=676")
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send(embed=embed, delete_after=60.0)
+        await client.get_channel(int(channel)).send(embed=embed, delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
 
@@ -542,7 +542,7 @@ async def on_message(message):
         embed.set_image(
             url="https://fresh01.net/files/attach/images/387452/598/387/bffded798f59bcaf9d6715ec475a989a.jpg")
         channel = 703972929507033159
-        await client.get_channel(int(channel)).send(embed=embed, delete_after=60.0)
+        await client.get_channel(int(channel)).send(embed=embed, delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~만포"):
@@ -570,7 +570,7 @@ async def on_message(message):
                                    "5환 : 192포\n"
                                    "6환 : 5환포인트 + 체력10포\n\n"
                                    "어디까지나 참고용이고 상세스텟은 환포계산기를 이용해주세요\n\n"
-                                   "~환포계산기 명령어로 다운가능```", delete_after=60.0)
+                                   "~환포계산기 명령어로 다운가능```", delete_after=180.0)
 
         await asyncio.sleep(5)
         await message.delete()
@@ -583,17 +583,17 @@ async def on_message(message):
                                    "듀얼날짜 : 매주일요일\n"
                                    "듀얼장소 : 2채 투기장\n"
                                    "듀얼시간 : 7시30분부터\n\n"
-                                   "듀얼당일 7시20분까지 미리 모여주셔야합니다.\n\n```", delete_after=60.0)
+                                   "듀얼당일 7시20분까지 미리 모여주셔야합니다.\n\n```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content == ("~부족듀얼"):
         channel = 703972929507033159
         await client.get_channel(int(channel)).send("부족듀얼신청합니다.\n" + message.author.display_name)
-        await message.channel.send("```신청이 완료되었습니다.```", delete_after=60.0)
+        await message.channel.send("```신청이 완료되었습니다.```", delete_after=180.0)
         await asyncio.sleep(5)
         await message.delete()
     elif message.content.startswith('~'):
-        await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=20.0)
+        await message.channel.send("```명령어가 존재하지않습니다.\n~명령어 <-를 입력하여 명령어를 확인해주세요.```", delete_after=10.0)
         await asyncio.sleep(5)
         await message.delete()
 access_token = os.environ["BOT_TOKEN"]
