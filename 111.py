@@ -169,4 +169,3 @@ async def on_message(message):
                                        '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
             await asyncio.sleep(0)
             await message.delete()
-client.run("NjY0MTA2Nzk2MTc2Mzc1ODA5.XqGk-w.4Y86-h18uHg_JzBXBcFgIdkvZzQ")
