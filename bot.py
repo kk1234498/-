@@ -30,11 +30,6 @@ class MyClient(discord.Client):
 
 client = MyClient()
 @client.event
-    async def on_ready():
-    print("봇가동이 완료되었습니다.")
-
-    game = discord.Game("bot채널에서 명령어확인가능")
-    await client.change_presence(status=discord.Status.online, activity=game)
 async def on_message(message):
     if message.author == client.user:
         return
