@@ -2,27 +2,7 @@ import discord, asyncio, datetime, sys, os, random
 from parser import *
 from discord.ext import commands
 from datetime import datetime
-class MyClient(discord.Client):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.bg_task = self.loop.create_task(self.my_background_task())
 
-    async def my_background_task(self):
-        await self.wait_until_ready()
-        counter = 0
-        channel = self.get_channel(691643060127400030)  # channel ID goes here
-        while not self.is_closed():
-
-            await channel.send('```[백화난만 채팅공지사항]\n'
-                               '매너있는 채팅부탁드립니다.\n\n'
-                               '봇사용은 봇채널에서 이용해주시기 바랍니다.\n\n'
-                               '해당 공지사항은 한시간에 한번씩 출력됩니다.\n\n'
-                               '거래파기 & 혐사 & 비매너에 주의해주세요.```', delete_after=60.0)
-
-            await asyncio.sleep(3600) # ??초마다 메시지전송
-
-
-client = MyClient()
 client = discord.Client()
 
 
