@@ -8,9 +8,10 @@ class MyClient(discord.Client):
         self.bg_task = self.loop.create_task(self.my_background_task())
 
     async def on_ready(self):
-    game = discord.Game("bot채널에서 명령어확인가능")
-    await client.change_presence(status=discord.Status.online, activity=game)
-
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('공지용봇')
 
     async def my_background_task(self):
         await self.wait_until_ready()
