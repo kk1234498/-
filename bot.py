@@ -621,7 +621,8 @@ async def on_message(message):
                                    '```개인듀얼시간입니다.\n'
                                    '개인듀얼은 참여만해도 개인듀얼포인트 3포인트 지급\n'
                                    '부족원 모이는장소 : 동61 , 남61\n'
-                                   '개인듀얼 입장방법 : 듀얼채널 - 사람들 우르르가는곳```')
+                                   '개인듀얼 입장방법 : 듀얼채널 - 사람들 우르르가는곳'
+                                   '개인듀얼 입장마감 : 10시08분```')
     elif message.content.startswith("!만월"):
         msg = await message.channel.send('바보', delete_after=2.0)
         await asyncio.sleep(2)
