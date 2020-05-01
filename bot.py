@@ -72,7 +72,6 @@ async def on_message(message):
         await client.get_channel(int(channel)).send("```희귀펫을 잡기위해 필요하다\n추가정보 작성중```", delete_after=30.0)
         await asyncio.sleep(5)
         await message.delete()
-
     elif message.content == ("~복권"):
         channel = 703972929507033159
         await client.get_channel(int(channel)).send(
@@ -748,6 +747,12 @@ async def on_message(message):
     elif message.content.startswith("[구매]"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
+                                   '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
+        await asyncio.sleep(0)
+        await message.delete()
+    elif message.content.startswith("!!재생"):
+        await message.channel.send('```[안내]\n'
+                                   '노래봇은 musicbot 채널에서 사용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
