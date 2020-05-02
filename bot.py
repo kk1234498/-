@@ -604,8 +604,9 @@ async def on_message(message):
         channel = 692324317953785867
         await client.get_channel(int(channel)).send("듀얼신청합니다.\n" + message.author.display_name)
         await message.channel.send("```신청이 완료되었습니다.\n\n"
+                                   "듀얼공지사항을 필독해주세요\n\n"
                                    "듀얼날짜 : 매주일요일\n"
-                                   "듀얼장소 : 2채 투기장\n"
+                                   "듀얼장소 : 2채 투기장 & 3채 투기장\n"
                                    "듀얼시간 : 7시30분부터\n\n"
                                    "듀얼당일 7시20분까지 미리 모여주셔야합니다.\n\n```", delete_after=60.0)
         await asyncio.sleep(5)
