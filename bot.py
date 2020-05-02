@@ -616,7 +616,7 @@ async def on_message(message):
         await message.channel.send("```신청이 완료되었습니다.```", delete_after=60.0)
         await asyncio.sleep(5)
         await message.delete()
-        elif message.content == ("!갠듀"):
+    elif message.content == ("!갠듀"):
         await message.channel.send('@everyone\n '
                                    '```개인듀얼시간입니다.\n'
                                    '개인듀얼은 참여만해도 개인듀얼포인트 3포인트 지급\n'
