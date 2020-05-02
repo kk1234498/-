@@ -627,7 +627,7 @@ async def on_message(message):
         msg = await message.channel.send('바보', delete_after=2.0)
         await asyncio.sleep(2)
         await msg.delete()
-        await message.channel.send('아이고! 놀려버렸네! 이를어쩌지!!!', delete_after=2.0)
+        await message2.channel.send('아이고! 놀려버렸네! 이를어쩌지!!!', delete_after=2.0)
         await asyncio.sleep(2)
         await message.delete()
     elif message.content.startswith("!유진"):
@@ -681,61 +681,61 @@ async def on_message(message):
         await message.channel.send('섹시한 사람', delete_after=2.0)
         await asyncio.sleep(2)
         await message.delete()
-    elif message.content.startswith(prefix + "삽니다"):
+    elif message.content.startswith("삽니다"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "살게요"):
+    elif message.content.startswith("살게요"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "살게여"):
+    elif message.content.startswith("살게여"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "사요"):
+    elif message.content.startswith("사요"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "사여"):
+    elif message.content.startswith("사여"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "팝니다"):
+    elif message.content.startswith("팝니다"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "팔게요"):
+    elif message.content.startswith("팔게요"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "팔게여"):
+    elif message.content.startswith("팔게여"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "팔아요"):
+    elif message.content.startswith("팔아요"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
         await asyncio.sleep(0)
         await message.delete()
-    elif message.content.startswith(prefix + "팔아여"):
+    elif message.content.startswith("팔아여"):
         await message.channel.send('```[안내]\n'
                                    '장사는 가족장터를 이용해주세요\n'
                                    '해당글은 10초뒤 삭제됩니다.```', delete_after=10.0)
