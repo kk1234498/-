@@ -34,8 +34,6 @@ async def on_message(message):
     
     if message.author == client.user:
         return
-    if (message.content.startsWith(prefix)) return;
-
     elif message.content == ("~!명령어"):
         embed = discord.Embed(title="명령어모음집", description="[편의성관련]\n"
                                                           "~홈피\n~돈페트\n~주사위\n~가위바위보\n~듀얼신청\n~노래봇명령어\n"
