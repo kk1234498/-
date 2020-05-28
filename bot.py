@@ -625,68 +625,6 @@ async def on_message(message):
                                    '부족원 모이는장소 : 동61 , 남61\n'
                                    '개인듀얼 입장방법 : 듀얼채널 - 동:8 남:73\n'
                                    '개인듀얼 입장마감 : 10시08분```')
-    elif message.content.startswith("!만월"):
-        msg = await message.channel.send('바보', delete_after=2.0)
-        await asyncio.sleep(2)
-        await msg.delete()
-        await message.channel.send('아이고! 놀려버렸네! 이를어쩌지!!!', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!유진"):
-        await message.channel.send('날개없는 천사', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!연재"):
-        msg = await message.channel.send('그놈의 셀지개 지겹지 않습니까? 휴먼', delete_after=2.0)
-        await asyncio.sleep(2)
-        await msg.delete()
-        await message.channel.send('죽는것또한 지겹지 않습니까? 휴먼', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!문별"):
-        await message.channel.send('별이 빛나는 밤', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!가라"):
-        await message.channel.send('가라가라 펫잡으러가라', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!소다"):
-        await message.channel.send('터프 물-개', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!용복치"):
-        await message.channel.send('우리들의 족장님', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!썸데이"):
-        await message.channel.send('주작 ㅊㅋㅊㅋ', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.channel.send('백룡 ㅊㅋㅊㅋ', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.channel.send('노득의 기운이!!', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!다미"):
-        await message.channel.send('아니에오!!! 덜렁이에오!!!', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("물-개"):
-        await message.channel.send('사조직을 쳐냅시다!!', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!뀨잇"):
-        await message.channel.send('내 꿈은 DJ', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith("!헥사쿤"):
-        await message.channel.send('섹시한 사람', delete_after=2.0)
-        await asyncio.sleep(2)
-        await message.delete()
-    elif message.content.startswith('~'):
-        await message.channel.send("```명령어가 존재하지않습니다.\nbot채널에서 명령어를 확인해주세요.```", delete_after=10.0)
-        await asyncio.sleep(5)
-        await message.delete()
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
