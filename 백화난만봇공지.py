@@ -27,4 +27,4 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run("NjY0MTA2Nzk2MTc2Mzc1ODA5.XhSPpg.rmDTSYcHorEoOHn1c9rMjiGm13s")
+client.run("")
