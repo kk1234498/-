@@ -27,4 +27,5 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run("")
+access_token = os.environ['BOT_TOKEN']
+client.run("access_token")
