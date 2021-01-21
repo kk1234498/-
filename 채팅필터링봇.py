@@ -40,4 +40,4 @@ async def on_message(message):
         await asyncio.sleep(0)
         await message.delete()
 
-bot.run("NzA2MTQxMTc4NjQyMzAwOTk5.Xq17OA.Qkecfv2ToxON6TYYsAP33apC5sk")
+bot.run("")
