@@ -1,4 +1,3 @@
 discord.py==1.2.5
-discord
-asyncio
-random
+asyncio==1.2.5
+random==1.2.5
