@@ -151,4 +151,5 @@ async def on_message(message):
             embed = discord.Embed(title="가위바위보", description=answer, color=0x00aaaa)
             await message.channel.send(embed=embed)
             return
-bot.run("NjY0MTA2Nzk2MTc2Mzc1ODA5.XhSPpg.MqE-twmwv6dtfLDiKJUJFkbV3Tg")
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
