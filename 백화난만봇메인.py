@@ -152,4 +152,4 @@ async def on_message(message):
             await message.channel.send(embed=embed)
             return
 
-bot.run("NjY0MTA2Nzk2MTc2Mzc1ODA5.XhSPpg.rmDTSYcHorEoOHn1c9rMjiGm13s")
+bot.run("")
