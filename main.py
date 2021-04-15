@@ -1,7 +1,4 @@
 import discord
-import asyncio
-import datetime
-import random
 import os
 
 bot = discord.Client()
@@ -157,55 +154,7 @@ async def on_message(message):
         await bot.get_channel(int(channel)).send(msg)
         await message.channel.send('```정규듀얼 신청이 완료되었습니다.```')
         return None
-    elif message.content == "!정보":
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="봇명령어", value="!타이머\n", inline=False)
-        await message.channel.send(embed=embed)
-
-    elif message.content == "!정보 환가라":
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="닉네임", value="환가라", inline=False)
-        embed.add_field(name="역할", value="순캐", inline=False)
-        await message.channel.send(embed=embed)
-
-    elif message.content == "!정보 어필":
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="닉네임", value="어필", inline=False)
-        embed.add_field(name="역할", value="완캐", inline=False)
-        await message.channel.send(embed=embed)
-
-    elif message.content == "!정보 Lara★":
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="닉네임", value="Lara★", inline=False)
-        embed.add_field(name="역할", value="완캐", inline=False)
-        await message.channel.send(embed=embed)
-
-    elif message.content == "!정보 썸데이":
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="닉네임", value="썸데이 / 물안개 / 물이슬", inline=False)
-        embed.add_field(name="역할", value="품번마스터 / 부두술사", inline=False)
-        await message.channel.send(embed=embed)
-    elif message.content == "!추첨":
-        await message.delete()
-        await message.channel.send('```첫번째 숫자```')
-        await message.channel.send(random.randint(0, 9))
-        await asyncio.sleep(5)
-        await message.channel.send('```두번째 숫자```')
-        await message.channel.send(random.randint(0, 9))
-        await asyncio.sleep(5)
-        await message.channel.send('```세번째 숫자```')
-        await message.channel.send(random.randint(0, 9))
-
-    elif message.content == "!타이머":
-        await message.channel.send('```초단위 설정가능\n'
-                                   '예제[20초설정시] - !타이머 20```')
-    elif message.content.startswith("!타이머"):
-        ch = int(message.content.split(" ")[1])
-        await message.channel.send("설정하신 시간이 지나면 알려드릴게요!", delete_after=5.0)
-        await asyncio.sleep(ch)
-        await message.channel.send(
-            '{0.author.mention} 시간지났어요!'.format(
-                message))
+  
 
 access_token = os.environ["BOT_TOKEN"]
 bot.run("access_token")
